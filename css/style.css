@@ -1,0 +1,268 @@
+@font-face {
+    font-family: "Chubby Choo";
+    src: url("../assets/fonts/chubby-choo-regular.woff2") format("woff2");
+}
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Chubby Choo', sans-serif;
+    color: #0d0600;
+    font-size: 32px;
+}
+body {
+    background-color: #ffd401;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    min-height: 100%;
+    position: relative;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}            
+img {
+    flex: 0 0 auto;
+    margin: 20px 0 10px;
+}
+.shadow {
+    transition: filter .2s ease-in;
+    filter: drop-shadow(1px 3px 1px rgba(0,0,0,0.3));
+}
+.shadow:active {
+    filter: none;
+}
+.logo {
+    margin-bottom: 70px;
+    filter: drop-shadow(-3px 0px 1px rgba(0,0,0,1));
+}
+.box {
+    background-color: #faec8b;
+    border-radius: 15px;
+    padding: 23px;
+    border: 5px solid rgb(104 199 201);
+    margin: 20px;
+    box-shadow: inset -3px -3px 0px #269295;
+    transition: box-shadow .2s ease-in;
+    cursor: pointer;
+    position: relative;
+}
+.box:first-child {
+    padding-left: 200px;
+}
+.box:last-child {
+    padding-right: 200px;
+}
+.box:hover {
+    box-shadow: inset -3px -3px 0px rgba(0,19,255,0);
+}
+.box:active {
+    box-shadow: inset -3px -3px 0px rgba(0,19,255,0);
+    filter: drop-shadow(1px 3px 1px rgba(0,0,0,0));
+}
+.container {
+    display: flex;
+    margin-top: 60px;
+}
+h2 {
+    margin: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    filter: drop-shadow(-3px 0px 1px rgba(0,0,0,.1));
+}
+.avatar {
+    position: absolute;
+    max-width: 230px;
+    max-height: 230px;
+    width: auto;
+    height: auto;
+}
+.left {
+    width: 120px;
+    top: -66px;
+    left: 0;
+    transform: scaleX(-1);
+}
+.right {
+    width: 180px;
+    right: -53px;
+    top: -72px;
+}
+.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+li {
+    list-style: none;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: .7;
+        border-radius: 0;
+    }
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: .2;
+        border-radius: 50%;
+    }
+}
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.img-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+}
+.fade-out,
+.fade-in {
+    position: absolute;
+}
+.fade-out {
+    left: 0;
+    animation: fade-out .3s forwards;
+    animation-delay: 15s;
+}
+.fade-in {
+    left: 100px;
+    opacity: 0;
+    animation: fade-in .3s forwards;
+    animation-delay: 15s;
+}
+li:nth-child(1) {
+    background-image: url('../assets/images/squigle_1.svg');
+    left: 25%;
+    width: 42px;
+    height: 19px;
+    animation-delay: 0s;
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+li:nth-child(2) {
+    background-image: url('../assets/images/squigle_2.svg');
+    left: 10%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+    animation-direction: reverse;
+}
+li:nth-child(3) {
+    background-image: url('../assets/images/squigle_1.svg');
+    left: 70%;
+    width: 60px;
+    height: 40px;
+    animation-delay: 4s;
+}
+li:nth-child(4) {
+    background-image: url('../assets/images/bone.svg');
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+li:nth-child(5) {
+    background-image: url('../assets/images/squigle_2.svg');
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+li:nth-child(6) {
+    background-image: url('../assets/images/bone.svg');
+    left: 75%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 3s;
+    animation-direction: reverse;
+}
+li:nth-child(7) {
+    background-image: url('../assets/images/squigle_1.svg');
+    left: 35%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 7s;
+    animation-direction: reverse;
+}
+li:nth-child(8) {
+    background-image: url('../assets/images/squigle_2.svg');
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+li:nth-child(9) {
+    background-image: url('../assets/images/squigle_2.svg');
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+    animation-direction: reverse;
+}
+li:nth-child(10) {
+    background-image: url('../assets/images/squigle_2.svg');
+    left: 85%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+.modal {
+    background-color: #ffe5ca;
+    text-align: center;
+    filter: drop-shadow(10px 13px 1px rgba(0,0,0,0.3));
+}
+dialog::backdrop {
+    background: none;
+}
+.shake:hover {
+    cursor: pointer;
+    animation: shake 150ms 2 linear;
+}
+@keyframes shake {
+    0% {
+        transform: translate(0, 3px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, -3px) rotate(-5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+.modal h2 {
+    color: #9875ef;
+}
+.round-title {
+    color: #ff0000;
+    margin-bottom: 30px;
+}

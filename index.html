@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Terčík</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    </head>
+    <body>
+        <div class="bg" >
+            <ul class="squigle">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div >
+        <div class="content">
+            <img src="assets/images/tercik_logo.svg" alt="Terčík" width="290" class="logo">
+            <h2 class="round-title">Round <span id="round-num"></span> - <span id="round-title"></span></h2>
+            <img onclick="playAudio()" src="assets/images/play_red.svg" alt="Play" width="80" class="shadow shake">
+            <img src="assets/images/play_me.svg" alt="Play me" width="140">
+            <div class="container">
+                <div onclick="submitAnswer('terka')" class="box shadow">
+                    <h2>terka</h2>
+                    <img class="avatar left" src="assets/images/terka.png" alt="Terka">
+                </div>
+                <div onclick="submitAnswer('bacik')" class="box shadow">
+                    <img class="avatar right" src="assets/images/bacik.png" alt="Bacik">
+                    <h2>bacik</h2>
+                </div>
+            </div>
+        </div>
+
+        <dialog id="result" class="modal">
+            <h2>Hurray!</h2>
+            <p>You scored <span id="final-score"></span></p>
+            <div class="img-container">
+                <img class="fade-out" src="assets/gif/happy_dog_result.gif">
+                <img class="fade-in" src="assets/gif/final_boss_bacik.gif">
+            </div>
+        </dialog>
+
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
